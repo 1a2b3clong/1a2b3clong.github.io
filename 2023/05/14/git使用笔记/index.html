@@ -16,19 +16,21 @@
   <meta name="author" content="1a2b3clong">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="long">
-<meta property="og:url" content="http://example.com/2023/05/13/long/index.html">
+    <meta name="description" content="git使用笔记 一、介绍 Git 最初是由 Linus Torvalds 为了管理 Linux 内核开发而创建的。   Git 是一种开源的分布式的版本控制系统      每个开发者都有一个完整的代码库。无需联网，备份还原，多人协作，分支切换   Git 是一套内容寻址文件系统   二、分区123456789Workspace：工作区     与.git同一目录下的其他文件Index &#x2F; Stag">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git使用笔记">
+<meta property="og:url" content="http://example.com/2023/05/14/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="1a2b3clong&#39;s blog">
+<meta property="og:description" content="git使用笔记 一、介绍 Git 最初是由 Linus Torvalds 为了管理 Linux 内核开发而创建的。   Git 是一种开源的分布式的版本控制系统      每个开发者都有一个完整的代码库。无需联网，备份还原，多人协作，分支切换   Git 是一套内容寻址文件系统   二、分区123456789Workspace：工作区     与.git同一目录下的其他文件Index &#x2F; Stag">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-13T14:59:45.000Z">
-<meta property="article:modified_time" content="2023-05-13T14:59:45.646Z">
+<meta property="article:published_time" content="2023-05-14T02:03:52.000Z">
+<meta property="article:modified_time" content="2023-05-14T02:29:23.727Z">
 <meta property="article:author" content="1a2b3clong">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>long - 1a2b3clong&#39;s blog</title>
+  <title>git使用笔记 - 1a2b3clong&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -194,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="long"></span>
+            <span id="subtitle" data-typed-text="git使用笔记"></span>
           
         </div>
 
@@ -205,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-13 22:59" pubdate>
-          2023年5月13日 晚上
+        <time datetime="2023-05-14 10:03" pubdate>
+          2023年5月14日 上午
         </time>
       </span>
     
@@ -217,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          1.5k 字
         
       </span>
     
@@ -228,7 +230,7 @@
         
         
         
-          1 分钟
+          13 分钟
         
       </span>
     
@@ -266,12 +268,61 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">long</h1>
+            <h1 style="display: none">git使用笔记</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h1 id="git使用笔记"><a href="#git使用笔记" class="headerlink" title="git使用笔记"></a>git使用笔记</h1><hr>
+<h2 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h2><blockquote>
+<p>Git 最初是由 Linus Torvalds 为了管理 Linux 内核开发而创建的。</p>
+</blockquote>
+<blockquote>
+<p>Git 是一种开源的分布式的版本控制系统<br>      每个开发者都有一个完整的代码库。<br>无需联网，备份还原，多人协作，分支切换</p>
+</blockquote>
+<blockquote>
+<p>Git 是一套内容寻址文件系统</p>
+</blockquote>
+<hr>
+<h2 id="二、分区"><a href="#二、分区" class="headerlink" title="二、分区"></a>二、分区</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">Workspace：工作区<br>     与<span class="hljs-string">.git</span>同一目录下的其他文件<br>Index / Stage：暂存区<br>    <span class="hljs-string">.git/index</span>文件<br>Repository：本地仓库<br>    <span class="hljs-string">.git/object</span>储存文件blob对象<br>Remote：远程仓库<br>    github gitee<br><span class="hljs-string">.git</span>   :版本库<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="三、常用命令"><a href="#三、常用命令" class="headerlink" title="三、常用命令"></a>三、常用命令</h2><font  size=3>
+
+<p> <code>git config --global user.name &quot;xxx&quot; </code><br>   <em>github 账号名字</em></p>
+<p> <code>git config --global user.email &quot;xxxx&quot; </code><br> <em>github 账号邮箱</em></p>
+<p><code>git init</code><br><em>初始化本地仓库</em></p>
+<p><code>git add xxx </code><br><em>添加文件到暂存区</em></p>
+<p><code>git commit -m &quot;xxx&quot;</code><br><em>添加文件到本地仓库，并提交注释message</em></p>
+<p><code>git status</code><br><em>工作区已修改但未暂存、暂存但未提交的文件</em></p>
+<p><code>git diff xxx</code><br><em>工作区与暂存区文件的差别</em></p>
+<p><code>git log</code><br><em>本地仓库历史提交命令和记录</em></p>
+<p><code>git log –pretty=oneline</code><br><em>只显示id和提交注释</em></p>
+<p><code>git reset --hard HEAD^</code><br><em>撤销仓库最近一次提交，回到上次提交的内容，HEAD^^是上上次，’’HEAD~3是上上上次</em></p>
+<p><code>git reflog</code><br><em>列出所有仓库提交命令记录(提交，合并，重置)</em></p>
+<p><code>git reset --hard xxxxx</code><br><em>所有内容回到指定版本</em></p>
+<p><code>git checkout -- xxx</code><br><em>指定文件回到暂存区或仓库的状态</em></p>
+<p><code>ssh-keygen -t rsa –C “xxx”</code><br>*ssh产生id_rsa 私匙 ，id_rsa.pub 公匙 ，加密算法type 是rsa，注释comment<br>将公匙复制，上传到github&#x3D;&gt;setting&#x3D;&gt;ssh<br>*</p>
+<p><code>git remote add origin xxx</code><br>*添加远程仓库<br> ssh连接 <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;">&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;</a>:用户名&#x2F;仓库名<br> http连接 <a target="_blank" rel="noopener" href="https://www.github.com/%E7%94%A8%E6%88%B7%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D">https://www.github.com/用户名/仓库名</a> *</p>
+<p><code>git push origin master</code><br>*第一次加-u  全拼  –set-upstream 将 master与远程仓库连接 *</p>
+<p><code>git clone xxx</code><br><em>克隆远程仓库到本地</em></p>
+<p><code>git branch dev</code><br><em>创建dev分支</em></p>
+<p><code>git checkout dev</code><br><em>-b 创建dev分支并转到dev分支</em></p>
+<p><code>git branch  </code><br><em>列出所有分支</em></p>
+<p><code>git merge dev </code><br><em>将dev分支和当前分支合并</em></p>
+<p><code>git branch –d dev</code><br><em>删除dev分支</em></p>
+<p><code>git stash </code><br><em>将当前分支内容转到隐藏区</em></p>
+<p><code>git stash list</code><br><em>列出隐藏区的分支内容</em></p>
+<p><code>git stash apply xxx </code><br><em>恢复隐藏区分支内容</em></p>
+<p><code>git stash drop</code><br><em>删除隐藏分支内容</em></p>
+<p><code>git stash pop</code><br><em>恢复并删除隐藏区内容</em></p>
+<p><code>git remote</code><br><em>查看远程库，-v 详细信息</em></p>
+<p><code> git push origin master</code><br><em>将本地仓库推送远程仓库</em></p>
+<p><code>git checkout –b dev origin/dev</code><br><em>创建dev分支并将远程dev分支 克隆到本地dev分支</em></p>
+<p><code>git branch --set-upstream origin/dev dev</code><br><em>将本地dev分支与 远程dev分支关联起来</em></p>
+</font>
+-------
+      最后修改于2023-05-14 10:03 周日 周日
                 
               </div>
             
@@ -288,8 +339,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>long</div>
-      <div>http://example.com/2023/05/13/long/</div>
+      <div>git使用笔记</div>
+      <div>http://example.com/2023/05/14/git使用笔记/</div>
     </div>
     <div class="license-meta">
       
@@ -301,7 +352,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月13日</div>
+          <div>2023年5月14日</div>
         </div>
       
       
@@ -337,8 +388,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/13/helloworld/" title="helloworld">
-                        <span class="hidden-mobile">helloworld</span>
+                      <a href="/2023/05/13/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

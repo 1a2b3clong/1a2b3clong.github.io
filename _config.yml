@@ -1,10 +1,10 @@
 # Configurations
 title:            1a2b3clong
 longtitle:        1a2b3clong Gitbook
-author:           HE Tao
+author:           1a2b3clong
 email:            wenlongli486@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+   blog in GitBook style.
 
 version:          1.0
 gitbook_version:  3.2.3

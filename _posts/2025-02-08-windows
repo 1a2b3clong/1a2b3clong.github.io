@@ -1,0 +1,55 @@
+### Windows  系统 必备软件 备忘录
+
+#### 软件包管理 Scoop
+
+1. 打开powershell，设置scoop 安装目录
+
+   ```powershell
+   [environment]::setEnvironmentVariable('SCOOP','D:\ScoopApps','Machine') 
+   $env:SCOOP='D:\ScoopApps'
+   ```
+
+2. 设置允许脚本执行
+
+   ```powershell
+   Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+   ```
+
+3. 安装
+
+   ```powershell
+   iwr -useb get.scoop.sh | iex
+   ```
+
+4. 检查是否安装成功
+
+   ```powershell
+   scoop help
+   ```
+
+5. 添加bucket (源)
+
+   ```powershell
+   scoop bucket add extras  
+   git clone --depth=1 https://github.com/ScoopInstaller/Extras  D:\APP\Scoop\buckets\extras
+   scoop bucket add versions
+   scoop bucket add java
+   ```
+
+6. 多线程下载
+
+   ```powershell
+   scoop install aria2
+   scoop config aria2-warning-enabled false
+   scoop config aria2-enabled true
+   scoop config aria2-retry-wait 4
+   scoop config aria2-split 16
+   scoop config aria2-max-connection-per-server 16
+   scoop config aria2-min-split-size 4M
+   ```
+
+7. 推荐软件
+
+   ```powershell
+   scoop install 7zip unzip vim typora VSCode Gow Everything git mingw python QuickLook sudo windows-terminal yesplaymusic grep pandoc
+   ```

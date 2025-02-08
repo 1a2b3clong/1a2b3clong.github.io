@@ -1,6 +1,14 @@
-### Windows  系统 必备软件 备忘录
+---
+title: 软件包管理 Scoop
+author: network
+date: 2024-05-24
+category: note
+layout: post
+mermaid: true
+---
 
-#### 软件包管理 Scoop
+
+### 软件包管理 Scoop
 
 1. 打开powershell，设置scoop 安装目录
 
